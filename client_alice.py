@@ -85,19 +85,24 @@ def start_client():
         logger.info(f"Résultat de l'accès Admin (ZKP) : {val_msg}")
 
         # 3. Phase 2: Transfert de Données (EtM)
-        logger.info("Envoi du message secret...")
+        logger.info("Canal prêt. Tapez 'quit' pour quitter.")
         
-        message = b"Bonjour Bob ! Ceci est un message protege contre l'analyse et la modification."
-        encrypted_msg = encrypt_message(enc_key, mac_key, message)
-        client.sendall(encrypted_msg)
-        
-        data = client.recv(4096)
-        if data:
-            try:
-                plaintext = decrypt_message(enc_key, mac_key, data)
-                logger.info(f"Réponse de Bob : {plaintext.decode()}")
-            except ValueError as e:
-                logger.error(f"Erreur de sécurité sur la réponse : {e}")
+        while True:
+            msg_str = input("\n[Vous/Alice] Entrez un message: ")
+            if msg_str.lower() == 'quit':
+                break
+                
+            message = msg_str.encode('utf-8')
+            encrypted_msg = encrypt_message(enc_key, mac_key, message)
+            client.sendall(encrypted_msg)
+            
+            data = client.recv(4096)
+            if data:
+                try:
+                    plaintext = decrypt_message(enc_key, mac_key, data)
+                    logger.info(f"Réponse de Bob : {plaintext.decode()}")
+                except ValueError as e:
+                    logger.error(f"Erreur de sécurité sur la réponse : {e}")
     except Exception as e:
         logger.error(f"Erreur inattendue : {e}")
     finally:

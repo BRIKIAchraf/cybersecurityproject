@@ -3,13 +3,13 @@
 PHASE = 2   # ← mettez 1, 2 ou 3
 
 if PHASE == 1:
-    BOB_IP   = '127.0.0.1'
+    BOB_IP   = '172.20.10.5'
     BOB_PORT = 9999
     EVE_PORT = 9998
     HOST     = '127.0.0.1'
 elif PHASE == 2:
     # --- CONFIGURATION RÉSEAU ---
-    BOB_IP   = '192.168.x.10'  # <-- METTRE L'IP DU PC DE VOTRE AMIE (Serveur)
+    BOB_IP   = '172.20.10.5'  # <-- METTRE L'IP DU PC DE VOTRE AMIE (Serveur)
     EVE_IP   = '192.168.x.11'  # <-- METTRE L'IP DE LA MACHINE KALI (Attaquant)
     BOB_PORT = 9999
     EVE_PORT = 9998

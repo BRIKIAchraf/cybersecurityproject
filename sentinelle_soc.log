@@ -26,3 +26,14 @@
 2026-06-10 21:11:26,963 - [Alice] INFO - Envoi du message secret...
 2026-06-10 21:11:26,964 - [Bob] INFO - Message reçu : Bonjour Bob ! Ceci est un message protege contre l'analyse et la modification.
 2026-06-10 21:11:26,965 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 21:39:02,267 - [Bob] INFO - En écoute sur 0.0.0.0:9999...
+2026-06-10 21:51:16,617 - [Alice] INFO - Signature de Bob vérifiée. Certificat valide.
+2026-06-10 21:51:16,620 - [Alice] INFO - Clés dérivées. Canal sécurisé établi.
+2026-06-10 21:51:16,634 - [Alice] INFO - Résultat de l'accès Admin (ZKP) : ACCES ADMIN OK
+2026-06-10 21:51:16,634 - [Alice] INFO - Envoi du message secret...
+2026-06-10 21:51:16,641 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 21:51:40,027 - [Alice] INFO - Signature de Bob vérifiée. Certificat valide.
+2026-06-10 21:51:40,029 - [Alice] INFO - Clés dérivées. Canal sécurisé établi.
+2026-06-10 21:51:40,055 - [Alice] INFO - Résultat de l'accès Admin (ZKP) : ACCES ADMIN OK
+2026-06-10 21:51:40,055 - [Alice] INFO - Envoi du message secret...
+2026-06-10 21:51:40,065 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
