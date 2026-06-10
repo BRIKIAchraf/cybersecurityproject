@@ -1,0 +1,52 @@
+(* Modele ProVerif pour le Projet Sentinelle *)
+(* Verification de l'echange de cle et du secret *)
+
+free c: channel.
+
+(* Cryptographie asymetrique *)
+type skey.
+type pkey.
+fun pk(skey): pkey.
+fun aenc(bitstring, pkey): bitstring.
+reduc forall m: bitstring, k: skey; adec(aenc(m, pk(k)), k) = m.
+
+(* Cryptographie symetrique *)
+type key.
+fun senc(bitstring, key): bitstring.
+reduc forall m: bitstring, k: key; sdec(senc(m, k), k) = m.
+
+(* Signatures *)
+type sskey.
+type spkey.
+fun spk(sskey): spkey.
+fun sign(bitstring, sskey): bitstring.
+reduc forall m: bitstring, k: sskey; checksign(sign(m, k), spk(k)) = m.
+reduc forall m: bitstring, k: sskey; getmess(sign(m, k)) = m.
+
+(* Elements du protocole *)
+free secret_msg: bitstring [private].
+query attacker(secret_msg).
+
+(* Alice *)
+let processA(pkB: pkey, skA: sskey) =
+    new k: key;
+    (* Envoi de la cle symetrique chiffree pour Bob et signee par Alice *)
+    out(c, (sign(aenc(k, pkB), skA)));
+    (* Envoi du message secret avec la cle symetrique *)
+    out(c, senc(secret_msg, k)).
+
+(* Bob *)
+let processB(skB: skey, pkA: spkey) =
+    in(c, m1: bitstring);
+    let msg_enc = checksign(m1, pkA) in
+    let k = adec(msg_enc, skB) in
+    in(c, m2: bitstring);
+    let m = sdec(m2, k) in
+    0.
+
+process
+    new skB: skey; let pkB = pk(skB) in
+    new skA: sskey; let pkA = spk(skA) in
+    out(c, pkB);
+    out(c, pkA);
+    (processA(pkB, skA) | processB(skB, pkA))

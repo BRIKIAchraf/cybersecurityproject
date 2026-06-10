@@ -1,0 +1,28 @@
+2026-05-07 15:08:00,860 - [Bob] INFO - En écoute sur 127.0.0.1:9999...
+2026-05-07 15:08:02,864 - [Eve] INFO - =========================================
+2026-05-07 15:08:02,864 - [Eve] INFO - --- Arsenal d'Attaque d'Eve (Sentinelle) ---
+2026-05-07 15:08:02,864 - [Eve] INFO - =========================================
+2026-05-07 15:08:02,865 - [Eve] INFO - En écoute sur 9998 (Mode: poodle)
+2026-05-07 15:08:04,868 - [Alice] INFO - Mode test: Connexion à Eve (simulation d'interception)
+2026-05-07 15:08:04,870 - [Eve] INFO - Lancement Attaque: POODLE / Malleability
+2026-05-07 15:08:04,870 - [Bob] INFO - Connexion de ('127.0.0.1', 23258)
+2026-05-07 15:08:04,878 - [Bob] INFO - Signature d'Alice vérifiée. Identité confirmée.
+2026-05-07 15:08:04,880 - [Alice] INFO - Signature de Bob vérifiée. Certificat valide.
+2026-05-07 15:08:04,881 - [Alice] INFO - Clés dérivées. Canal sécurisé établi.
+2026-05-07 15:08:04,881 - [Eve] WARNING - Paquet modifié en vol ! (55 octets)
+2026-05-07 15:08:04,881 - [Bob] ERROR - Erreur inattendue : MAC invalide — paquet rejeté
+2026-06-10 21:10:03,015 - [Bob] INFO - En écoute sur 127.0.0.1:9999...
+2026-06-10 21:11:10,938 - [Eve] INFO - =========================================
+2026-06-10 21:11:10,938 - [Eve] INFO - --- Arsenal d'Attaque d'Eve (Sentinelle) ---
+2026-06-10 21:11:10,939 - [Eve] INFO - =========================================
+2026-06-10 21:11:10,942 - [Eve] INFO - En écoute sur 9998 (Mode: poodle)
+2026-06-10 21:11:26,879 - [Bob] INFO - Connexion de ('127.0.0.1', 13938)
+2026-06-10 21:11:26,944 - [Bob] INFO - Signature d'Alice vérifiée. Identité confirmée.
+2026-06-10 21:11:26,956 - [Alice] INFO - Signature de Bob vérifiée. Certificat valide.
+2026-06-10 21:11:26,956 - [Bob] INFO - Clés dérivées. Canal sécurisé établi.
+2026-06-10 21:11:26,958 - [Alice] INFO - Clés dérivées. Canal sécurisé établi.
+2026-06-10 21:11:26,962 - [Bob] INFO - Preuve ZKP validée : Accès Administrateur accordé.
+2026-06-10 21:11:26,963 - [Alice] INFO - Résultat de l'accès Admin (ZKP) : ACCES ADMIN OK
+2026-06-10 21:11:26,963 - [Alice] INFO - Envoi du message secret...
+2026-06-10 21:11:26,964 - [Bob] INFO - Message reçu : Bonjour Bob ! Ceci est un message protege contre l'analyse et la modification.
+2026-06-10 21:11:26,965 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
