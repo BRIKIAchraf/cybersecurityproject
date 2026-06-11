@@ -37,3 +37,14 @@
 2026-06-10 21:51:40,055 - [Alice] INFO - Résultat de l'accès Admin (ZKP) : ACCES ADMIN OK
 2026-06-10 21:51:40,055 - [Alice] INFO - Envoi du message secret...
 2026-06-10 21:51:40,065 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 22:00:46,405 - [Alice] INFO - Signature de Bob vérifiée. Certificat valide.
+2026-06-10 22:00:46,407 - [Alice] INFO - Clés dérivées. Canal sécurisé établi.
+2026-06-10 22:00:46,446 - [Alice] INFO - Résultat de l'accès Admin (ZKP) : ACCES ADMIN OK
+2026-06-10 22:00:46,447 - [Alice] INFO - Canal prêt. Tapez 'quit' pour quitter.
+2026-06-10 22:00:46,472 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 22:01:00,493 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 22:01:16,829 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 22:03:58,826 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-10 22:04:22,199 - [Alice] INFO - Réponse de Bob : ACK : message recu et authentifie.
+2026-06-11 02:00:55,917 - [Bob] INFO - Serveur en ecoute sur 0.0.0.0:9999
+2026-06-11 02:00:55,917 - [Bob] INFO - En attente d'Alice...
